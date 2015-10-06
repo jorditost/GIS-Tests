@@ -4,7 +4,7 @@ This unix shell scripts are used to process Landsat 7 and Landsat 8 satellite im
 
 It reprojects them to Web Mercator (EPSG:3857) and makes some image processing (color, saturation, contrast, etc.).
 
-Source:
+For more details and image sources check:
 https://www.mapbox.com/guides/processing-satellite-imagery/#processing-for-true-color
 
 ## Usage
