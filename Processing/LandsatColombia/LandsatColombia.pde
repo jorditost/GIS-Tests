@@ -8,11 +8,17 @@ import de.fhpotsdam.unfolding.utils.*;
 import de.fhpotsdam.unfolding.providers.*;
 import de.fhpotsdam.unfolding.mapdisplay.MapDisplayFactory;
 
+public static boolean FULLSCREEN = true;
+
 UnfoldingMap map;
 UnfoldingMap landsat;
 
 public void setup() {
-  size(800, 600, P2D);
+  if (FULLSCREEN) {
+    size(displayWidth, displayHeight, P2D);
+  } else {
+    size(800, 600, P2D);
+  }
   
   Location colombiaLocation = new Location(10.1f, -73.2f);
   int zoomLevel = 6;
@@ -37,4 +43,8 @@ public void draw() {
   map.draw();
   //tint(255, 100);
   landsat.draw();
+}
+
+boolean sketchFullScreen() {
+  return FULLSCREEN;
 }
